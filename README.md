@@ -45,7 +45,7 @@ new Vue({
 
 ###### local init
 ```javascript
-import eventBus from 'darkfriend-vue-eventbus';
+import {eventBus} from 'darkfriend-vue-eventbus';
 
 // send
 let args = {param1: 'value1', param2: 'value2'};

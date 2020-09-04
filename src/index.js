@@ -28,9 +28,9 @@ export default {
                     eventMap = null;
                 });
             },
-            data() {
+            data: () => {
                 return {
-                    eventBus: eventBus,
+                    eventBus: eventBus
                 };
             },
         });

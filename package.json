@@ -1,6 +1,6 @@
 {
   "name": "darkfriend-vue-eventbus",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Vue eventbus",
   "main": "./dist/vue-eventbus.umd.min.js",
   "scripts": {
