@@ -5,7 +5,7 @@ Easy eventbus for vue.js.
 
 ## How install
 ```bash
-npm i vue_eventbus -S
+npm i darkfriend-vue-eventbus -S
 ```
 
 ## How use
@@ -13,7 +13,7 @@ npm i vue_eventbus -S
 ###### global init
 ```javascript
 import Vue from 'vue';
-import eventBus from 'vue_eventbus';
+import eventBus from 'darkfriend-vue-eventbus';
 
 Vue.use(eventBus);
 
@@ -45,7 +45,7 @@ new Vue({
 
 ###### local init
 ```javascript
-import eventBus from 'vue_eventbus';
+import eventBus from 'darkfriend-vue-eventbus';
 
 // send
 let args = {param1: 'value1', param2: 'value2'};
