@@ -62,6 +62,5 @@ Method              | Params            | Description                           
 ------------------- | ----------------- | -------------------------------------------------------------------------- | ---------------------------------------------
 `eventBus.$emit`  | `event, payload`  | Emit the event with the given payload.                                     | [vm.$emit](https://vuejs.org/v2/api/#vm-emit)
 `eventBus.$on`    | `event, callback` | Listen for the event with the given callback.                              | [vm.$on](https://vuejs.org/v2/api/#vm-on)
-`eventBus.listen` | `event, callback` | Listen for the event with the given callback. _Alias for `vm.$events.$on`_ | [vm.$on](https://vuejs.org/v2/api/#vm-on)
 `eventBus.$off`   | `event, callback` | Remove event listener(s) for the event                                     | [vm.$off](https://vuejs.org/v2/api/#vm-off)
 `eventBus.$once`   | `event, callback` | Listen for a custom event, but only once                                      | [vm.$once](https://vuejs.org/v2/api/#vm-once)
