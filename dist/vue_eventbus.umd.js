@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("vue"));
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["vue_eventbus"] = factory(require("vue"));
+	else
+		root["vue_eventbus"] = factory(root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -82,7 +91,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "fae3");
+/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -175,11 +184,11 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ "8bbf":
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = __WEBPACK_EXTERNAL_MODULE__8bbf__;
 
 /***/ }),
 
-/***/ "fae3":
+/***/ "fb15":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -220,12 +229,57 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
 // CONCATENATED MODULE: ./src/index.js
 
 const eventBus = new external_commonjs_vue_commonjs2_vue_root_Vue_default.a();
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
+/* harmony default export */ var src_0 = ({
+  install(Vue) {
+    Object.defineProperty(Vue.prototype, 'eventBus', {
+      get() {
+        return eventBus;
+      }
 
+    });
+    Vue.mixin({
+      beforeCreate() {
+        if (typeof this.$options.eventBus !== 'object') return;
+        let eventMap = {};
+
+        for (let key in this.$options.eventBus) {
+          eventMap[key] = this.$options.eventBus[key].bind(this);
+        }
+
+        this.$once('hook:beforeMount', () => {
+          for (let key in eventMap) {
+            eventBus.$on(key, eventMap[key]);
+          }
+        });
+        this.$once('hook:beforeDestroy', () => {
+          for (let key in eventMap) {
+            eventBus.$off(key, eventMap[key]);
+          }
+
+          eventMap = null;
+        });
+      },
+
+      data() {
+        return {
+          eventBus: eventBus
+        };
+      }
+
+    });
+  }
+
+});
+
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+
+
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_0);
 
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=vue-eventbus.common.js.map
+});
+//# sourceMappingURL=vue_eventbus.umd.js.map

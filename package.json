@@ -1,17 +1,17 @@
 {
-  "name": "vue-eventbus",
-  "version": "1.0.0",
+  "name": "vue_eventbus",
+  "version": "1.0.1",
   "description": "A Vue eventbus",
-  "main": "./dist/vue-eventbus.umd.min.js",
+  "main": "./dist/vue_eventbus.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-lib": "vue-cli-service build --target lib --name vue-eventbus src/index.js",
+    "build-lib": "vue-cli-service build --target lib --name vue_eventbus src/index.js",
     "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/darkfriend/vue-eventbus.git"
+    "url": "https://github.com/darkfriend/vue_eventbus.git"
   },
   "keywords": [
     "eventbus",
@@ -23,9 +23,9 @@
   "author": "darkfriend",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/darkfriend/vue-eventbus/issues"
+    "url": "https://github.com/darkfriend/vue_eventbus/issues"
   },
-  "homepage": "https://github.com/darkfriend/vue-eventbus#readme",
+  "homepage": "https://github.com/darkfriend/vue_eventbus#readme",
   "dependencies": {
     "vue": "^2.6.12"
   },
